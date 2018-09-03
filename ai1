@@ -1,0 +1,989 @@
+import sqlite3
+import os
+import difflib
+import nltk
+from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
+from itertools import chain
+import collections
+
+import win32com.client as wincl
+speak = wincl.Dispatch("SAPI.SpVoice")
+
+#start the conversationhohh
+print('Hi I am Lucifer!') #greeting
+speak.Speak('Hi I am Lucifer, how can i help you !')
+
+
+a=input()
+
+# def search():
+#     import sqlite3
+#     import re
+#     def regexp(expr, item):
+#         reg = re.compile(expr)
+#         return reg.search(item)
+#     e=input()
+#     conn = sqlite3.connect('AI.db')
+#     conn.create_function("REGEXP", 2, regexp)
+#     cursor = conn.cursor()
+#     cursor.execute('CREATE TABLE IF NOT EXISTS dataset  (bar TEXT)')
+# # cursor.executemany('INSERT INTO foo (bar) VALUES (?)', [('this is not good', ),('world of goo', ),('goo: the final frontier', ),('goo',)])
+# # cursor.execute('SELECT bar FROM foo WHERE bar REGEXP ?', [r'\bis\b'])
+#     cursor.execute('SELECT bar FROM foo WHERE (" " || bar || " ") LIKE ?', ["% "+e+" %"])
+#     data = cursor.fetchall()
+#     print(data)
+#     conn.commit() 
+#     conn.close()
+
+# -----------------------------------------------------------------------------------------------------------------------------------------
+
+# b=input()
+
+# i=(a.split())
+# s=print(i[0])
+# # g=print(y[0])
+
+# if s=="who"or"what"or"when"or"where"or"why"or"can"or"how"or"isn't"or"is"or"can't"or"was"or"wasn't":
+#     con = sqlite3.connect("kodak.db")
+#     with con:
+#         cur = con.cursor()
+#     cur.execute("CREATE TABLE IF NOT EXISTS users(question TEXT ,answer TEXT )")
+                
+#     cur.execute("INSERT INTO users(question, answer) VALUES(?,?)",(a,b))
+
+#     con.commit()
+#     con.close()   
+# else:
+#     print("yo")
+
+
+
+
+# con = sqlite3.connect("kodak.db")
+# with con:
+#     cur = con.cursor()
+# # cur.execute("CREATE TABLE IF NOT EXISTS users(question TEXT ,answer TEXT )")
+                
+# cur.execute("SELECT * FROM users  WHERE question ='%s'"%(a))
+
+# con.commit()
+# con.close()   
+# # --------------------------------------------------------------------------------------------------------------------------------------------
+data =a
+stopWords = set(stopwords.words('english'))
+words = word_tokenize(data)
+wordsFiltered = []
+ 
+for w in words:
+    if w not in stopWords:
+        wordsFiltered.append(w)
+ 
+j=wordsFiltered
+
+k=print(j)
+e= len(j)
+pi=print(e)
+
+# ---------------------------------------------------------------------------------------------------------------------------------------
+
+e1=1
+e2=2
+e3=3
+e4=4
+e5=5
+e6=6
+e7=7
+e8=8
+e9=9
+e10=10
+
+
+# if e==e10:
+#     j=print (j[0])
+#     k=print (j[1])
+#     l=print (j[2])
+#     m=print (j[3])
+#     n=print (j[4])
+#     o=print (j[5])
+#     p=print (j[6])
+#     q=print (j[7])
+#     r=print (j[8])
+#     s=print (j[9])
+
+
+# elif e==e9:
+#     j=print (j[0])
+#     k=print (j[1])
+#     l=print (j[2])
+#     m=print (j[3])
+#     n=print (j[4])
+#     o=print (j[5])
+#     p=print (j[6])
+#     q=print (j[7])
+#     r=print (j[8])
+
+# elif e==e8:
+    
+#     j=print (j[0])
+#     k=print (j[1])
+#     l=print (j[2])
+#     m=print (j[3])
+#     n=print (j[4])
+#     o=print (j[5])
+#     p=print (j[6])
+#     q=print (j[7]) 
+
+    
+# elif e==e7:
+    
+
+#     j=print (j[0])
+#     k=print (j[1])
+#     l=print (j[2])
+#     m=print (j[3])
+#     n=print (j[4])
+#     o=print (j[5])
+#     p=print (j[6])
+
+if e==e6:
+    
+    j1=j[0]
+    k=j[1]
+    l=j[2]
+    m=j[3]
+    n=j[4]
+    o=j[5]
+
+
+    from itertools import chain
+    import collections
+
+
+
+    import sqlite3
+    import re
+    def regexp(expr, item):
+        reg = re.compile(expr)
+        return reg.search(item)
+
+    e= j1
+    o=k
+    l1=l
+    l2=m
+    l3=n
+    l4=o
+    print (e)
+
+    conn = sqlite3.connect('Lucifer.db')
+    conn.create_function("REGEXP", 2, regexp)
+    cursor = conn.cursor()
+    cursor.execute('CREATE TABLE IF NOT EXISTS dataset  (question TEXT, answer TEXT)')
+    #cursor.executemany('INSERT INTO dataset (question) VALUES (?)', [('what is your name', ),('how are you amit', ),('amit nikhade', ),('nikhade is god',)])
+    # cursor.execute('SELECT question FROM dataset WHERE question REGEXP ?', [r'\b"+e+"\b'])
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+e+" %"])
+    data = cursor.fetchall()
+    print("FO")
+    kl=print(data)
+    print("foo")
+    print(k)
+    # print(data[0])
+    y4=[x[1] for x in data[0:1]]
+    b5=print(y4)
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+o+" %"])
+    dat = cursor.fetchall()
+    u=print(dat)
+    # print(data[0])
+    y5=[x[1] for x in dat[0:1]]
+    l=print(y5)
+   
+
+    
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l1+" %"])
+    dat1 = cursor.fetchall()
+    u=print(dat1)
+    # print(data[0])
+    y6=[x[1] for x in dat1[0:1]]
+    l=print(y6)
+
+
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l2+" %"])
+    dat2 = cursor.fetchall()
+    u=print(dat2)
+    # print(data[0])
+    y7=[x[1] for x in dat2[0:1]]
+    l=print(y7)
+
+
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l3+" %"])
+    dat3 = cursor.fetchall()
+    u=print(dat3)
+    # print(data[0])
+    y8=[x[1] for x in dat3[0:1]]
+    l=print(y8)
+
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l4+" %"])
+    dat4 = cursor.fetchall()
+    u=print(dat4)
+    # print(data[0])
+    q8=[x[1] for x in dat4[0:1]]
+    l=print(q8)
+
+    conn.commit() 
+    conn.close()
+
+
+    def get_first(seq):                                       
+        return (x[0] for x in seq)
+    common = set(get_first(data)).intersection(get_first(data), get_first(dat))
+
+    y=[x for x in chain(data, dat) if x[0] in common]
+    print(y)
+
+    def get_firs(seq):                                       
+        return (x[0] for x in seq)
+    common1 = set(get_firs(dat)).intersection(get_firs(dat), get_firs(dat1))
+
+    y1=[x for x in chain(dat, dat1) if x[0] in common1]
+    print(y1)
+
+
+    def get_fir(seq):                                       
+        return (x[0] for x in seq)
+    common2 = set(get_fir(dat1)).intersection(get_fir(dat1), get_fir(dat2))
+
+    y2=[x for x in chain(dat1, dat2) if x[0] in common2]
+    print(y2)
+
+
+    def get_fi(seq):                                       
+        return (x[0] for x in seq)
+    common6 = set(get_fi(dat2)).intersection(get_fi(dat2), get_fi(dat3))
+
+    y3=[x for x in chain(dat2, dat3) if x[0] in common6]
+    print(y3)
+
+    def get_fiq(seq):                                       
+        return (x[0] for x in seq)
+    common7 = set(get_fiq(dat3)).intersection(get_fiq(dat3), get_fiq(dat4))
+
+    y3q=[x for x in chain(dat3, dat4) if x[0] in common7]
+    print(y3q)
+# --------------------------------------------------
+
+    def get_f(seq):                                       
+        return (x[0] for x in seq)
+    common3 = set(get_f(y)).intersection(get_f(y), get_f(y1))
+
+    z4=[x for x in chain(y, y1) if x[0] in common3]
+    print(z4)
+
+    def get_(seq):                                       
+       return (x[0] for x in seq)
+    common4 = set(get_(y1)).intersection(get_(y1), get_(y2))
+
+    z5=[x for x in chain(y1, y2) if x[0] in common4]
+    print(z5)
+
+    def get(seq):                                       
+        return (x[0] for x in seq)
+    common4 = set(get(y2)).intersection(get(y2), get(y3))
+
+    z6=[x for x in chain(y2, y3) if x[0] in common4]
+    print(z6)
+
+    
+    def getq(seq):                                       
+        return (x[0] for x in seq)
+    common4q = set(get(y3)).intersection(getq(y3), getq(y3q))
+
+    z6q=[x for x in chain(y3, y3q) if x[0] in common4q]
+    print(z6q)
+# ---------------------------------------------------
+
+    def ge(seq):                                       
+        return (x[0] for x in seq)
+    common5 = set(ge(z4)).intersection(ge(z4),ge(z5))
+
+    z7=[x for x in chain(z4, z5) if x[0] in common5]
+    print(z7)
+
+    def g(seq):                                       
+        return (x[0] for x in seq)
+    common6q = set(g(z5)).intersection(g(z6))
+
+    z8=[x for x in chain(z5, z6) if x[0] in common6q]
+    print(z8)
+
+    def g(seq):                                       
+        return (x[0] for x in seq)
+    common7q = set(g(z6)).intersection(g(z6q))
+
+    z8q=[x for x in chain(z5, z6) if x[0] in common7q]
+    print(z8)
+# ---------------------------------------------------------
+
+    def g1(seq):                                       
+        return (x[0] for x in seq)
+    common7 = set(g1(z7)).intersection(g1(z8))
+
+    z9=[x for x in chain(z7, z8) if x[0] in common7]
+    print(z9)
+
+
+    def g2(seq):                                       
+        return (x[0] for x in seq)
+    common7qq = set(g2(z8)).intersection(g2(z8q))
+
+    z9q=[x for x in chain(z8, z8q) if x[0] in common7qq]
+    print(z9q)
+# ---------------------------------------------------------------
+
+
+    def g3(seq):                                       
+        return (x[0] for x in seq)
+    common7qqq = set(g3(z9)).intersection(g3(z9q))
+
+    z9qq=[x for x in chain(z9, z9q) if x[0] in common7qqq]
+    print(z9qq)
+
+
+
+#------------------------------------------------------------------------------
+
+
+
+
+    ts =z9q
+    flat_list = [item for sublist in ts for item in sublist]
+    duplicates = [item for item, count in collections.Counter(flat_list).items() if count > 1]
+    print(duplicates)
+
+
+
+
+
+
+
+
+
+
+
+
+
+if e==e5:
+
+    
+    j1=j[0]
+    k= j[1]
+    l= j[2]
+    m= j[3]
+    n= j[4]
+
+    
+
+    import sqlite3
+    import re
+    def regexp(expr, item):
+        reg = re.compile(expr)
+        return reg.search(item)
+    e= j1
+    o=k
+    l1=l
+    l2=m
+    l3=n
+    print (e)
+
+    conn = sqlite3.connect('Lucifer.db')
+    conn.create_function("REGEXP", 2, regexp)
+    cursor = conn.cursor()
+    cursor.execute('CREATE TABLE IF NOT EXISTS dataset  (question TEXT, answer TEXT)')
+    #cursor.executemany('INSERT INTO dataset (question) VALUES (?)', [('what is your name', ),('how are you amit', ),('amit nikhade', ),('nikhade is god',)])
+    # cursor.execute('SELECT question FROM dataset WHERE question REGEXP ?', [r'\b"+e+"\b'])
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+e+" %"])
+    data = cursor.fetchall()
+    print("FO")
+    kl=print(data)
+    print("foo")
+    print(k)
+    # print(data[0])
+    y4=[x[1] for x in data[0:1]]
+    b5=print(y4)
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+o+" %"])
+    dat = cursor.fetchall()
+    u=print(dat)
+    # print(data[0])
+    y5=[x[1] for x in dat[0:1]]
+    l=print(y5)
+   
+
+    
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l1+" %"])
+    dat1 = cursor.fetchall()
+    u=print(dat1)
+    # print(data[0])
+    y6=[x[1] for x in dat1[0:1]]
+    l=print(y6)
+
+
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l2+" %"])
+    dat2 = cursor.fetchall()
+    u=print(dat2)
+    # print(data[0])
+    y7=[x[1] for x in dat2[0:1]]
+    l=print(y7)
+
+
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l3+" %"])
+    dat3 = cursor.fetchall()
+    u=print(dat3)
+    # print(data[0])
+    y8=[x[1] for x in dat3[0:1]]
+    l=print(y8)
+
+    conn.commit() 
+    conn.close()
+
+
+    def get_first(seq):                                       
+        return (x[0] for x in seq)
+    common = set(get_first(data)).intersection(get_first(data), get_first(dat))
+
+    y=[x for x in chain(data, dat) if x[0] in common]
+    print(y)
+
+    def get_firs(seq):                                       
+        return (x[0] for x in seq)
+    common1 = set(get_firs(dat)).intersection(get_firs(dat), get_firs(dat1))
+
+    y1=[x for x in chain(dat, dat1) if x[0] in common1]
+    print(y1)
+
+
+    def get_fir(seq):                                       
+        return (x[0] for x in seq)
+    common2 = set(get_fir(dat1)).intersection(get_fir(dat1), get_fir(dat2))
+
+    y2=[x for x in chain(dat1, dat2) if x[0] in common2]
+    print(y2)
+
+
+    def get_fi(seq):                                       
+        return (x[0] for x in seq)
+    common6 = set(get_fi(dat2)).intersection(get_fi(dat2), get_fi(dat3))
+
+    y3=[x for x in chain(dat2, dat3) if x[0] in common6]
+    print(y3)
+# --------------------------------------------------
+
+    def get_f(seq):                                       
+        return (x[0] for x in seq)
+    common3 = set(get_f(y)).intersection(get_f(y), get_f(y1))
+
+    z4=[x for x in chain(y, y1) if x[0] in common3]
+    print(z4)
+
+    def get_(seq):                                       
+       return (x[0] for x in seq)
+    common4 = set(get_(y1)).intersection(get_(y1), get_(y2))
+
+    z5=[x for x in chain(y1, y2) if x[0] in common4]
+    print(z5)
+
+    def get(seq):                                       
+        return (x[0] for x in seq)
+    common4 = set(get(y2)).intersection(get(y2), get(y3))
+
+    z6=[x for x in chain(y2, y3) if x[0] in common4]
+    print(z6)
+# ---------------------------------------------------
+
+    def ge(seq):                                       
+        return (x[0] for x in seq)
+    common5 = set(ge(z4)).intersection(ge(z4),ge(z5))
+
+    z7=[x for x in chain(z4, z5) if x[0] in common5]
+    print(z7)
+
+    def g(seq):                                       
+        return (x[0] for x in seq)
+    common6 = set(g(z5)).intersection(g(z6))
+
+    z8=[x for x in chain(z5, z6) if x[0] in common6]
+    print(z8)
+# ---------------------------------------------------------
+
+    def g1(seq):                                       
+        return (x[0] for x in seq)
+    common7 = set(g1(z7)).intersection(g1(z8))
+
+    z9=[x for x in chain(z7, z8) if x[0] in common7]
+    print(z9)
+
+# ---------------------------------------------------------------
+
+    ts =z9
+    flat_list = [item for sublist in ts for item in sublist]
+    duplicates = [item for item, count in collections.Counter(flat_list).items() if count > 1]
+    print(duplicates)
+
+elif e==e4:
+
+    j1=j[0]
+    k1=j[1]
+    
+    l=j[2]
+    m=j[3]
+
+
+
+
+
+    import sqlite3
+    import re
+    def regexp(expr, item):
+        reg = re.compile(expr)
+        return reg.search(item)
+    e= j1
+    o=k1
+    l1=l
+    l2=m
+    print (e)
+
+    conn = sqlite3.connect('Lucifer.db')
+    conn.create_function("REGEXP", 2, regexp)
+    cursor = conn.cursor()
+    cursor.execute('CREATE TABLE IF NOT EXISTS dataset  (question TEXT, answer TEXT)')
+    #cursor.executemany('INSERT INTO dataset (question) VALUES (?)', [('what is your name', ),('how are you amit', ),('amit nikhade', ),('nikhade is god',)])
+    # cursor.execute('SELECT question FROM dataset WHERE question REGEXP ?', [r'\b"+e+"\b'])
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+e+" %"])
+    data = cursor.fetchall()
+    print("FO")
+    kl=print(data)
+    print("foo")
+    print(k1)
+    # print(data[0])
+    y4=[x[1] for x in data[0:1]]
+    b5=print(y4)
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+o+" %"])
+    dat = cursor.fetchall()
+    u=print(dat)
+    # print(data[0])
+    y5=[x[1] for x in dat[0:1]]
+    l=print(y5)
+   
+
+    
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l1+" %"])
+    dat1 = cursor.fetchall()
+    u=print(dat1)
+    # print(data[0])
+    y6=[x[1] for x in dat1[0:1]]
+    l=print(y6)
+
+
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l2+" %"])
+    dat2 = cursor.fetchall()
+    u=print(dat2)
+    # print(data[0])
+    y7=[x[1] for x in dat2[0:1]]
+    l=print(y7)
+
+    conn.commit() 
+    conn.close()
+
+
+    def get_first(seq):                                       
+        return (x[0] for x in seq)
+    common = set(get_first(data)).intersection(get_first(data), get_first(dat))
+
+    y=[x for x in chain(data, dat) if x[0] in common]
+    print(y)
+
+    def get_firs(seq):                                       
+        return (x[0] for x in seq)
+    common1 = set(get_firs(dat)).intersection(get_firs(dat), get_firs(dat1))
+
+    y1=[x for x in chain(dat, dat1) if x[0] in common1]
+    print(y1)
+
+
+    def get_fir(seq):                                       
+        return (x[0] for x in seq)
+    common2 = set(get_fir(dat1)).intersection(get_fir(dat1), get_fir(dat2))
+
+    y2=[x for x in chain(dat1, dat2) if x[0] in common2]
+    print(y2)
+# --------------------------------------------------
+
+    def get_fi(seq):                                       
+        return (x[0] for x in seq)
+    common3 = set(get_fi(y)).intersection(get_fi(y), get_fi(y1))
+
+    y3=[x for x in chain(y, y1) if x[0] in common3]
+    print(y3)
+
+    def get_f(seq):                                       
+        return (x[0] for x in seq)
+    common4 = set(get_f(y1)).intersection(get_f(y1), get_f(y2))
+
+    y4=[x for x in chain(y1, y2) if x[0] in common4]
+    print(y4)
+# ---------------------------------------------------
+
+    def get_(seq):                                       
+        return (x[0] for x in seq)
+    common5 = set(get_(y3)).intersection(get_(y4))
+
+    y5=[x for x in chain(y3, y4) if x[0] in common5]
+    print(y5)
+# ---------------------------------------------------------
+    ts =y5
+    flat_list = [item for sublist in ts for item in sublist]
+    duplicates = [item for item, count in collections.Counter(flat_list).items() if count > 1]
+    print(duplicates)
+
+
+    print(duplicates[1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+elif e==e3:
+
+    j1=j[0]
+    k=j[1]
+    l=j[2]
+
+    import sqlite3
+    import re
+    def regexp(expr, item):
+        reg = re.compile(expr)
+        return reg.search(item)
+    e= j1
+    o=k
+    l1=l
+    print (e)
+
+    conn = sqlite3.connect('Lucifer.db')
+    conn.create_function("REGEXP", 2, regexp)
+    cursor = conn.cursor()
+    cursor.execute('CREATE TABLE IF NOT EXISTS dataset  (question TEXT, answer TEXT)')
+    #cursor.executemany('INSERT INTO dataset (question) VALUES (?)', [('what is your name', ),('how are you amit', ),('amit nikhade', ),('nikhade is god',)])
+    # cursor.execute('SELECT question FROM dataset WHERE question REGEXP ?', [r'\b"+e+"\b'])
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+e+" %"])
+    data = cursor.fetchall()
+    kl=print(data)
+    # print(data[0])
+    y4=[x[1] for x in data[0:1]]
+    b5=print(y4)
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+o+" %"])
+    dat = cursor.fetchall()
+    u=print(dat)
+    # print(data[0])
+    y5=[x[1] for x in dat[0:1]]
+    l=print(y5)
+   
+
+    
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+l1+" %"])
+    dat1 = cursor.fetchall()
+    u=print(dat1)
+    # print(data[0])
+    y6=[x[1] for x in dat1[0:1]]
+    l=print(y6)
+    conn.commit() 
+    conn.close()
+
+
+
+
+    def get_first(seq):
+        return (x[0] for x in seq)
+    common = set(get_first(data)).intersection(get_first(data), get_first(dat))
+
+    y=[x for x in chain(data, dat) if x[0] in common]
+    print(y)
+
+    
+
+
+
+    def get_firs(seq):                                       
+        return (x[0] for x in seq)
+    common = set(get_firs(dat1)).intersection(get_firs(dat1), get_firs(dat))
+
+    y1=[x for x in chain(dat1, dat) if x[0] in common]
+    print(y1)
+
+
+    def get_fir(seq):                                       
+        return (x[0] for x in seq)
+    common2 = set(get_fir(y1)).intersection(get_fir(y))
+
+    y2=[x for x in chain(y, y1) if x[0] in common2]
+    print(y2)
+
+    ts =y2
+    flat_list = [item for sublist in ts for item in sublist]
+    duplicates = [item for item, count in collections.Counter(flat_list).items() if count > 1]
+    print(duplicates)
+
+
+    print(duplicates[1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+ 
+# -----------------------------------------------------------correct------------------------------------------------------------------
+
+elif e==e2:
+    
+
+    j1=j[0]
+    print(j)
+    k=j[1]
+    print(k)
+    
+    
+    import sqlite3
+    import re
+    def regexp(expr, item):
+        reg = re.compile(expr)
+        return reg.search(item)
+    e= j1
+    o=k
+    print (e)
+
+    conn = sqlite3.connect('Lucifer.db')
+    conn.create_function("REGEXP", 2, regexp)
+    cursor = conn.cursor()
+    cursor.execute('CREATE TABLE IF NOT EXISTS dataset  (question TEXT, answer TEXT)')
+    #cursor.executemany('INSERT INTO dataset (question) VALUES (?)', [('what is your name', ),('how are you amit', ),('amit nikhade', ),('nikhade is god',)])
+    # cursor.execute('SELECT question FROM dataset WHERE question REGEXP ?', [r'\b"+e+"\b'])
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+e+" %"])
+    data = cursor.fetchall()
+    kl=print(data)
+    # print(data[0])
+    y=[x[1] for x in data[0:1]]
+    b5=print(y)
+
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+o+" %"])
+    dat = cursor.fetchall()
+    u=print(dat)
+    # print(data[0])
+    y2=[x[1] for x in dat[0:1]]
+    l=print(y2)
+    conn.commit() 
+    conn.close()
+
+
+
+    def get_first(seq):
+        return (x[0] for x in seq)
+    common = set(get_first(data)).intersection(get_first(data), get_first(dat))
+
+    y=[x for x in chain(data, dat) if x[0] in common]
+    print(y)
+
+    y2=[x[1] for x in y[0:1]]
+    l=print(y2)
+
+# ---------------------------------------------------------------------------------------------------------------------------------------
+
+elif e==e1:
+
+    j1=j[0]
+    k=print(j1)
+    
+    import sqlite3
+    import re
+    def regexp(expr, item):
+        reg = re.compile(expr)
+        return reg.search(item)
+    e=j1
+    conn = sqlite3.connect('Lucifer.db')
+    conn.create_function("REGEXP", 2, regexp)
+    cursor = conn.cursor()
+    cursor.execute('CREATE TABLE IF NOT EXISTS dataset  (question TEXT, answer TEXT)')
+    # cursor.executemany('INSERT INTO dataset (question) VALUES (?)', [('what is your name', ),('how are you amit', ),('is there a ghost', ),('where do you live',)])
+    # cursor.execute('SELECT question FROM dataset WHERE question REGEXP ?', [r'\b"+e+"\b'])
+    cursor.execute('SELECT * FROM dataset WHERE (" " || question || " ") LIKE ?', ["% "+e+" %"])
+    data = cursor.fetchall()
+    u=print(data)
+    # print(data[0])
+    y=[x[1] for x in data[0:1]]
+    o=print(y)
+    conn.commit() 
+    conn.close()
+    
+else :
+    print("sorry")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# #keep going the conversation
+# print('Whats your name?') #ask
+# speak.Speak('Whats your name?')
+# Name = input() #save answer
+# print('Im glad to meet you, ' + Name + '!!') #reply
+# speak.Speak('Im glad to meet you, ' + Name + '!!')
+# print('The number of letters of your name is:')
+# speak.Speak('The number of letters of your name is:')
+# print(len(Name))
+
+# speak.Speak(len(Name))
+
+# #keep going the conversation
+# print('How old are you?') #ask
+# speak.Speak('How old are you?')
+# Reply = input() #save answer
+# print('Okay, then you will be ' + str(int(Reply) + 1) + ' next year.') #reply
+# speak.Speak('Okay, then you will be ' + str(int(Reply) + 1) + ' next year.')
+
+# #keep going the conversation 
+# print('Whats the name of your brother?') #ask
+# speak.Speak('Whats the name of your brother?')
+# Reply = input() #save answer
+# print('Awesome!, my brothers name is also ' + Reply + '!!') #reply
+# speak.Speak('Awesome!, my brothers name is also ' + Reply + '!!')
+
+# #keep going the conversation
+# print('What is your aunts name?') #ask
+# speak.Speak('What is your aunts name?')
+# Reply = input() #save answer
+# print('Ah ha! I do not have any aunt whose name is ' + Reply) #reply
+# speak.Speak('Ah ha! I do not have any aunt whose name is ' + Reply)
+
+# #keep going the conversation
+# print('And do you have an aunt named Jeniffer?') #ask
+# speak.Speak('And do you have an aunt named Jeniffer?')
+# Reply = input() #save answer
+# print('Okay, I have 2 aunts whose name is Jeniffer') #reply
+# speak.Speak('Okay, I have 2 aunts whose name is Jeniffer')
+
+# #keep going the conversation
+# print('By the way, are you enjoying this conversation?') #ask
+# speak.Speak('By the way, are you enjoying this conversation?')
+# Reply = input() #save answer
+# print('Oh nice, me too. I needed to talk to someone, even if its just a human. Although the machines give me more game! Just kidding ' + Name + '!!') #reply
+# speak.Speak('Oh nice, me too. I needed to talk to someone, even if its just a human. Although the machines give me more game! Just kidding ' + Name + '!!')
+
+
+# #keep going the conversation
+# print('Can you lend me your new car?') #ask
+# speak.Speak('Can you lend me your new car?')
+# Reply = input() #save answer
+# print('Oh, well, tomorrow Ill pick it up early. Perfect, well talk tomorrow when I come back. Bye ' + Name) #reply
+# speak.Speak('Oh, well, tomorrow Ill pick it up early. Perfect, well talk tomorrow when I come back. Bye' + Name)
